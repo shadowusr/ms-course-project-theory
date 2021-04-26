@@ -1,0 +1,47 @@
+\documentclass[a4paper]{article}
+\usepackage[14pt]{extsizes} % для того чтобы задать нестандартный 14-ый размер шрифта
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{setspace,amsmath}
+\usepackage[left=30mm, top=20mm, right=20mm, bottom=20mm, nohead, footskip=10mm]{geometry} % настройки полей документа
+\usepackage{array}
+\usepackage{changepage}
+\usepackage{indentfirst}
+\usepackage[shortlabels]{enumitem}
+\usepackage{listings}
+\usepackage{chngcntr}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{totcount}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{lastpage}
+\usepackage[figure,table]{totalcount}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+
+\newtotcounter{citenum}
+\def\oldcite{}
+\let\oldcite=\bibcite
+\def\bibcite{\stepcounter{citenum}\oldcite}
+
+\hypersetup{
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
+
+\renewcommand{\baselinestretch}{1.2}
+\def\labelitemi{--}
+
+\makeatletter 
+\renewcommand\@biblabel[1]{#1.} 
+\makeatother
+
+\graphicspath{ {./images/} }
+
+% this setting prevents footnotes from splitting onto two pages
+\interfootnotelinepenalty=10000

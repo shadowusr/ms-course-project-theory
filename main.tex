@@ -1,0 +1,19 @@
+\input{common/head}
+
+\newcounter{bibliosel}
+\setcounter{bibliosel}{0}
+
+
+\begin{document}
+	\counterwithin{lstlisting}{section}
+	\counterwithin{figure}{section}
+	\counterwithin{equation}{section}
+	
+	\include{sections/title}
+	\tableofcontents
+	\include{sections/introduction}	
+	
+	\bibliographystyle{BibTeX-Styles/utf8gost71u}
+	\bibliography{biblio/external}
+\addcontentsline{toc}{section}{\protect\numberline{}Список литературы}
+\end{document}
